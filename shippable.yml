@@ -3,7 +3,7 @@ language: none
 
 build:
   pre_ci_boot:
-    image_name: scriptnull/clearlinux-git-ignore-ssl
+    image_name: vishnushippable/clearlinux-git-ignore-ssl
     image_tag: 3-28-pm
     pull: false
 
