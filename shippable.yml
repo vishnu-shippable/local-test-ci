@@ -2,8 +2,8 @@ language: node_js
 
 build:
   ci:
-    - echo "hello world"
     - node --version
+    - docker pull vishnushippable/private:nginx
 
 integrations:                 
   hub:
