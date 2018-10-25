@@ -4,7 +4,10 @@ jdk:
   - oraclejdk8
 
 build:
-  advancedReporting: true
+  pre_ci_boot:
+    image_name: drydock/c7javall
+    image_tag: master
+    pull: true
   ci:
     # Create folders for test and code coverage
     - mkdir -p shippable/testresults
