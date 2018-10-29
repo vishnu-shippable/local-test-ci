@@ -11,6 +11,7 @@ build:
   ci:
     - which java
     - which javac
+    - update-alternatives --list java
     # Create folders for test and code coverage
     - git clone https://github.com/scriptnull/node.git nodeRepo
     - ./nodeRepo/shipctl/x86_64/CentOS_7/install.sh
@@ -18,6 +19,7 @@ build:
     - source shipctl jdk set oraclejdk8
     - which java
     - which javac
+    - update-alternatives --list java
     - javac Hello.java
     - ls 
     - java Hello
