@@ -11,7 +11,7 @@ build:
   ci:
     - which java
     - which javac
-    - update-alternatives --list java
+    - update-alternatives --list
     # Create folders for test and code coverage
     - git clone https://github.com/scriptnull/node.git nodeRepo
     - ./nodeRepo/shipctl/x86_64/CentOS_7/install.sh
