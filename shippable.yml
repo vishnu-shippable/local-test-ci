@@ -19,7 +19,7 @@ build:
     - source shipctl jdk set oraclejdk8
     - which java
     - which javac
-    - update-alternatives --list java
+    - update-alternatives --list
     - javac Hello.java
     - ls 
     - java Hello
