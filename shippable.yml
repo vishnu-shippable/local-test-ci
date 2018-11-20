@@ -9,24 +9,11 @@ build:
     image_tag: v6.5.4
     pull: true
   ci:
-    - which java
-    - which javac
-    - update-alternatives --list
     # Create folders for test and code coverage
-#     - git clone https://github.com/scriptnull/node.git nodeRepo
-#     - ./nodeRepo/shipctl/x86_64/CentOS_7/install.sh
-#     - rm -rf nodeRepo
-#     - source shipctl jdk set oraclejdk8
-    - which java
-    - which javac
-    - update-alternatives --list
-    - javac Hello.java
-    - ls 
-    - java Hello
-    - cat /etc/drydock/.env 
-    - javac -version
-    - java -version
     - mkdir -p shippable/testresults
     - mkdir -p shippable/codecoverage
     - mvn install
     - cp -r target shippable/codecoverage
+    - ls
+    - javac Hello.java
+    - java Hello
