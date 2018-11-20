@@ -2,11 +2,15 @@ language: java
 
 jdk:
   - oraclejdk8
+  
+env:
+  - IMG_VER="v6.5.4"
+  - IMG_VER="master"
 
 build:
   pre_ci_boot:
     image_name: drydock/c7javall
-    image_tag: v6.5.4
+    image_tag: $IMG_VER
     pull: true
   ci:
     # Create folders for test and code coverage
