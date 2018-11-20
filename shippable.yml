@@ -4,7 +4,7 @@ jdk:
   - oraclejdk8
   
 env:
-  - IMG_VER="v5.11.3"
+  - IMG_VER="v6.2.4"
 #   - IMG_VER="v6.5.4"
 #   - IMG_VER="master"
 
