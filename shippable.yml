@@ -5,6 +5,7 @@ jdk:
   
 env:
   - IMG_VER="v6.2.4"
+  - IMG_VER="v6.3.2"
   - IMG_VER="v6.5.4"
   - IMG_VER="master"
 
