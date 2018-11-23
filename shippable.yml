@@ -4,10 +4,29 @@ jdk:
   - oraclejdk8
   
 env:
-  - IMG_VER="v6.2.4"
-  - IMG_VER="v6.3.2"
-  - IMG_VER="v6.5.4"
   - IMG_VER="master"
+  - IMG_VER="latest"
+  - IMG_VER="v6.10.4"
+  - IMG_VER="v6.10.1"
+  - IMG_VER="v6.9.4"
+  - IMG_VER="v6.9.1"
+  - IMG_VER="v6.8.4"
+  - IMG_VER="v6.8.1"
+  - IMG_VER="v6.7.4"
+  - IMG_VER="v6.7.2"
+  - IMG_VER="v6.7.1"
+  - IMG_VER="v6.6.4"
+  - IMG_VER="v6.6.1"
+  - IMG_VER="v6.5.4"
+  - IMG_VER="v6.5.2"
+  - IMG_VER="v6.5.1"
+  - IMG_VER="v6.4.4"
+  - IMG_VER="v6.4.2"
+  - IMG_VER="v6.3.4"
+  - IMG_VER="v6.3.3"
+  - IMG_VER="v6.3.2"
+  - IMG_VER="v6.2.4"
+
 
 build:
   pre_ci_boot:
