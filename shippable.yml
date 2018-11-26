@@ -1,7 +1,7 @@
 language: java
 
 jdk:
-  - openjdk7
+  - openjdk8
   
 env:
   - IMG_VER="master"
@@ -38,7 +38,7 @@ build:
     - git clone https://github.com/scriptnull/node.git nodeRepo
     - ./nodeRepo/shipctl/x86_64/CentOS_7/install.sh
     - rm -rf nodeRepo
-    - source shipctl jdk set openjdk7
+    - source shipctl jdk set openjdk8
     # Create folders for test and code coverage
     - mkdir -p shippable/testresults
     - mkdir -p shippable/codecoverage
