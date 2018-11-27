@@ -1,7 +1,7 @@
 language: java
 
 jdk:
-  - oraclejdk8
+  - oraclejdk7
   
 env:
   - IMG_VER="master"
@@ -30,15 +30,15 @@ env:
 
 build:
   pre_ci_boot:
-    image_name: drydock/c7javall
+    image_name: drydock/u16javall
     image_tag: $IMG_VER
     pull: true
   ci:
     # Apply shipctl patch
     - git clone https://github.com/scriptnull/node.git nodeRepo
-    - ./nodeRepo/shipctl/x86_64/CentOS_7/install.sh
+    - ./nodeRepo/shipctl/x86_64/Ubuntu_16.04/install.sh
     - rm -rf nodeRepo
-    - source shipctl jdk set oraclejdk8
+    - source shipctl jdk set oraclejdk7
     # Create folders for test and code coverage
     - mkdir -p shippable/testresults
     - mkdir -p shippable/codecoverage
