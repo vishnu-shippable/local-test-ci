@@ -2,48 +2,32 @@ language: java
 
 jdk:
   - oraclejdk8
-  
-env:
-  - IMG_VER="master"
-  - IMG_VER="latest"
-  - IMG_VER="v6.10.4"
-  - IMG_VER="v6.10.1"
-  - IMG_VER="v6.9.4"
-  - IMG_VER="v6.9.1"
-  - IMG_VER="v6.8.4"
-  - IMG_VER="v6.8.1"
-  - IMG_VER="v6.7.4"
-  - IMG_VER="v6.7.2"
-  - IMG_VER="v6.7.1"
-  - IMG_VER="v6.6.4"
-  - IMG_VER="v6.6.1"
-  - IMG_VER="v6.5.4"
-  - IMG_VER="v6.5.2"
-  - IMG_VER="v6.5.1"
-  - IMG_VER="v6.4.4"
-  - IMG_VER="v6.4.2"
-  - IMG_VER="v6.3.4"
-  - IMG_VER="v6.3.3"
-  - IMG_VER="v6.3.2"
-  - IMG_VER="v6.2.4"
-
-
+ 
 build:
   pre_ci_boot:
     image_name: drydock/c7javall
-    image_tag: $IMG_VER
+    image_tag: master
     pull: true
   ci:
-    # Apply shipctl patch
-    - git clone https://github.com/scriptnull/node.git nodeRepo
-    - ./nodeRepo/shipctl/x86_64/CentOS_7/install.sh
-    - rm -rf nodeRepo
-    - source shipctl jdk set oraclejdk8
-    # Create folders for test and code coverage
-    - mkdir -p shippable/testresults
-    - mkdir -p shippable/codecoverage
-    - mvn install
-    - cp -r target shippable/codecoverage
-    - ls
+    - java -version
+    - javac -version
+    - echo $JAVA_HOME
+    - echo $PATH
+    - java -version
+    - echo $SHIPPABLE_JDK_VERSION
+    - mvn --version    
+    - gradle --version
+    - ant -version
     - javac Hello.java
     - java Hello
+
+    # Apply shipctl patch
+#     - git clone https://github.com/scriptnull/node.git nodeRepo
+#     - ./nodeRepo/shipctl/x86_64/CentOS_7/install.sh
+#     - rm -rf nodeRepo
+#     - source shipctl jdk set oraclejdk8
+    # Create folders for test and code coverage
+#     - mkdir -p shippable/testresults
+#     - mkdir -p shippable/codecoverage
+#     - mvn install
+#     - cp -r target shippable/codecoverage
