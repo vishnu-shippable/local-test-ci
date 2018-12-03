@@ -1,6 +1,11 @@
-language: node_js
+language: java
+
+jdk:
+  - oraclejdk8
 
 build:
   ci:
-    - echo "hello world"
-    - node --version
+    - java -version
+    - javac -version
+    - echo "$JAVA_HOME"
+    - printenv
