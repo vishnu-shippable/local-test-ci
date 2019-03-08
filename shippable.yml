@@ -1,6 +1,9 @@
 language: node_js
 
 build:
+  pre_ci_boot:
+    image_name: drydock/u16nodall
+    image_tag: v6.9.4
   ci:
     - echo "hello world"
     - node --version
