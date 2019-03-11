@@ -30,3 +30,12 @@ integrations:
       on_start: always
       on_pull_request: always
 
+    - integrationName: email
+      type: email
+      recipients:
+        - vishnu@shippable.com
+      on_success: always
+      on_failure: always
+      on_cancel: always
+      on_start: always
+      on_pull_request: always
