@@ -19,3 +19,14 @@ integrations:
       on_cancel: always
       on_start: always
       on_pull_request: always
+
+    - integrationName: irc
+      type: irc
+      recipients:
+        - "chat.freenode.net#shiptest"
+      on_success: always
+      on_failure: always
+      on_cancel: always
+      on_start: always
+      on_pull_request: always
+
